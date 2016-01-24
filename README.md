@@ -1,17 +1,17 @@
 # Steps
 
-1. Install Docker or Docker Toolbox
-2. Install puppet-client from Docker Hub
+- Install Docker or Docker Toolbox
+- Install puppet-client from Docker Hub
 ```
 docker pull whatwedo/puppet
 ```
-3. Install puppet from Docker Hub
+- Install puppet from Docker Hub
 ```
 docker pull whatwedo/puppet-client
 ```
-4. Generate module
+- Generate module
 ```
 puppet module generate <USERNAME>-<MODULE NAME>.
 ```
-5. Upload
-6. Use it
+- Upload
+- Use it
