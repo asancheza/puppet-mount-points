@@ -1,0 +1,6 @@
+:backends:
+- yaml
+:hierarchy:
+- mountpoint_cfg
+:yaml:
+:datadir: /etc

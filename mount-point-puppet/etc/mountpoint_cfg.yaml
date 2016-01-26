@@ -1,0 +1,9 @@
+mountpoints:
+- point: /mnt/tmp
+device: /dev/mapper/vg1-test1
+fs: ext3
+options: rw,relatime,errors=continue,user_xattr,acl,barrier=1,data=ordered
+- point: /mnt/tmp2
+device: /dev/mapper/vg1-test2
+fs: ext3
+options: rw,relatime,errors=continue,user_xattr,acl,barrier=1,data=ordered
