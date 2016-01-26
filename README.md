@@ -4,17 +4,21 @@
 - Install puppet-client from Docker Hub
 - Install puppetmaster from Docker Hub
 - Configure puppet agent and puppetmaster
-- Copy the mount module in puppetmaster
+- Clone the mount module in puppetmaster /etc/puppet/modules/
 - Add in puppetmaster /etc/puppet/manifests/site.pp
 ```
 node default {
   include mount
 }
 ```
-- Run
+
+# Run
 ```
 puppet agent -t
 ```
-- Enjoy ;)
+# Modules
 
-- Added puppet-module using Hiera without shell script.
+1. puppet-mount: Puppet module using shell scripting 
+2. puppet-mount-puppet: Puppet module using Hierra for the configuration file.
+
+Enjoy ;)
