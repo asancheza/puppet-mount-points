@@ -19,6 +19,6 @@ puppet agent -t
 # Modules
 
 1. puppet-mount: Puppet module using shell scripting 
-2. puppet-mount-puppet: Puppet module using Hierra for the configuration file.
+2. puppet-mount-puppet: Puppet module using Hiera for the configuration file.
 
 Enjoy ;)

@@ -1,5 +1,4 @@
 class mount {
-
   $mountpoints = hiera('mountpoints')
 
   $mountpoints.each |$mp| {
