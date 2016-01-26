@@ -3,7 +3,7 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
+2. [Module Description](#module-description)
 3. [Setup - The basics of getting started with point](#setup)
     * [What point affects](#what-point-affects)
     * [Setup requirements](#setup-requirements)
@@ -15,28 +15,23 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+Puppet module to create and manage multiple mount points that do not exist in /etc/fstab.
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
+Each mount point have its own configuration in /etc/mountpoint_cfgs; the configuration files define the following options: file system, type, options, dump, pass.
 
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+The module should be able to manage multiple mount points. The goal is to ensure that they are mounted with the configured options. A configuration file update trigger a “refresh” of the target mount point.
+
+In addition to the configuration file, mount points have a specific folder structure, that is also managed through puppet. All mount points should have the following folders: partition, data, data/private and exports.
+
+The partition folder have an id file that contains the mount point it’s currently mounted on.
 
 ## Setup
 
 ### What point affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* /etc/mountpoint_cfgs
 
 ### Setup Requirements **OPTIONAL**
 
@@ -53,8 +48,9 @@ for upgrading, you may wish to include an additional section here: Upgrading
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+```
+puppet apply
+```
 
 ## Reference
 
@@ -65,15 +61,8 @@ with things. (We are working on automating this section!)
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Works in every Linux OS.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
-
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
+Clone the project at github and create issues to improve the puppet mount point module.

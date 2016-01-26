@@ -1,17 +1,18 @@
-# Steps
+# Steps to use it
 
-- Install Docker or Docker Toolbox
+- Install Docker Toolbox
 - Install puppet-client from Docker Hub
+- Install puppetmaster from Docker Hub
+- Configure puppet agent and puppetmaster
+- Copy the mount module in puppetmaster
+- Add in puppetmaster /etc/puppet/manifests/site.pp
 ```
-docker pull whatwedo/puppet
+node default {
+  include mount
+}
 ```
-- Install puppet from Docker Hub
+- Run
 ```
-docker pull whatwedo/puppet-client
+puppet agent -t
 ```
-- Generate module
-```
-puppet module generate <USERNAME>-<MODULE NAME>.
-```
-- Upload
-- Use it
+- Enjoy ;)
