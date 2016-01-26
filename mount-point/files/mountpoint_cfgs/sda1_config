@@ -1,0 +1,8 @@
+# Configuration file for SDA1
+
+FILESYSTEM=/dev/sda1
+DIR=/tmp/folder1
+TYPE=ext3
+OPTIONS=rw
+DUMP=0
+PASS=0
