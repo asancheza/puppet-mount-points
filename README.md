@@ -1,4 +1,4 @@
-# Steps to use it
+# Steps to use mount-point
 
 - Install Docker Toolbox
 - Install puppet-client from Docker Hub
@@ -16,3 +16,5 @@ node default {
 puppet agent -t
 ```
 - Enjoy ;)
+
+- Added puppet-module using Hiera without shell script.
